@@ -1,6 +1,7 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
 class Ticketing extends CI_Controller {
+    var $gError= array();
     public function __construct()
     {
         parent::__construct();
@@ -45,7 +46,6 @@ class Ticketing extends CI_Controller {
 
     public function createRoute()
     {
-        $this->load->model('Ticketing_model');
         $string = file_get_contents('php://input');
         $arr = $this->returnArr($string);
         if  (
@@ -132,6 +132,41 @@ class Ticketing extends CI_Controller {
         }
         else
         { $this->contentOut($res); }
+    }
+    public function addVehichle(){
+        $string = file_get_contents('php://input');
+        $arr = $this->returnArr($string);
+
+        $reg_no = $arr['reg_no'];
+        $seats_vip = $arr['seats'][0]['vip'];
+        $seats_normal = $arr['seats'][0]['normal'];
+        $driver_fname = $arr['driver'][0]['first_name'];
+        $driver_lname = $arr['driver'][0]['last_name'];
+        $driver_age = $arr['driver'][0]['age'];
+        $driver_license = $arr['driver'][0]['license_no'];
+        $this->getError($reg_no,'402','Field Registration Number is empty');
+        $this->getError($seats_vip,'402','Field For VIP Seats is empty');
+        $this->getError($seats_normal,'402','Field Normal Seats is empty');
+        $this->getError($driver_fname,'402','Field driver first name is empty');
+        $this->getError($driver_lname,'402','Field driver last name is empty');
+        $this->getError($driver_age,'402','Field driver Age is empty');
+        $this->getError($driver_license,'402','Field driver license is empty');
+        if(empty($this->gError))
+        {
+            echo 'A okay Mate';
+        }
+        else
+        {
+            $this->contentOut($this->gError);
+        }
+        
+    }
+    public function getError($field,$error_code,$error_desc){
+        $error = array();
+        if(empty($field)){
+            $error[$error_code] =$error_desc;
+            $this->gError = [$error];
+        }
     }
     
 }
