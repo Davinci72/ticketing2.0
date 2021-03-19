@@ -47,15 +47,36 @@ class Ticketing_model extends CI_Model {
             return true;
         }
     }
-    public function saveRoute($route_from,$route_to,$route_cost,$vid){
+    public function saveRoute(
+        $route_from,
+        $route_to,
+        $route_cost,
+        $departure,
+        $eta,
+        $comments,
+        $vid){
         $data = array(
             "route_from"=>$route_from,
             "route_to"=>$route_to,
             "routecost"=>$route_cost,
+            "departure"=>$departure,
+            "eta"=>$eta,
+            "comments"=>$comments,
             "vid"=>$vid,
             'status'=>1,
             'date_c'=>date("Y-m-d h:i:s")
         );
         return $this->db->insert('routes', $data);
+    }
+    public function getAllRoutes(){
+        $query = $this->db->get('routes');
+        $num = $query->num_rows();
+        if($num == 0){
+            return $num;
+        }
+        else
+        {
+            return $query->result();
+        }
     }
 }

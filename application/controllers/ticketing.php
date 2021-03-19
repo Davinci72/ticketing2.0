@@ -52,6 +52,9 @@ class Ticketing extends CI_Controller {
                 ! empty($arr['route_from']) && 
                 ! empty($arr['route_to']) && 
                 ! empty($arr['route_cost']) && 
+                ! empty($arr['departure']) && 
+                ! empty($arr['eta']) && 
+                ! empty($arr['comments']) && 
                 ! empty($arr['vid']) 
             )
 
@@ -67,7 +70,14 @@ class Ticketing extends CI_Controller {
             else
             {
                 /* save to database */
-                $this->Ticketing_model->saveRoute($arr['route_from'],$arr['route_to'],$arr['route_cost'],$arr['vid']);
+                $this->Ticketing_model->saveRoute(
+                    $arr['route_from'],
+                    $arr['route_to'],
+                    $arr['route_cost'],
+                    $arr['departure'],
+                    $arr['eta'],
+                    $arr['comments'],
+                    $arr['vid']);
                 $err = array(
                     "Success"=>"200",
                     "description"=>"Route Plan Saved Successfully"
@@ -111,5 +121,16 @@ class Ticketing extends CI_Controller {
         ->set_content_type('application/json')
         ->set_output(json_encode($res));
     }
-    
+    public function getAllRoutes(){
+        $res = $this->Ticketing_model->getAllRoutes();
+        if(($res == 0)){
+            $err = array(
+                'Error'=>'402',
+                'desc'=>'Empty Result'
+            );
+            $this->contentOut($err);
+        }
+        else
+        { $this->contentOut($res); }
+    }
 }

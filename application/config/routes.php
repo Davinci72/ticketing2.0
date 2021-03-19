@@ -73,6 +73,7 @@ $route['create-location']='Ticketing/createLocation';
 $route['get-locations/(:num)/(:num)']='Ticketing/getLocale/$1/$2';
 $route['get-route-info/(:num)/(:num)']='Ticketing/getRouteInfo/$1/$2';
 $route['plan-route/(:num)/(:num)']='Ticketing/createRoute/$1/$2';
+$route['get-all-routes']='Ticketing/getAllRoutes';
 
 /* 
 codeigniter uri settings 
