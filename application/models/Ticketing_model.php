@@ -101,6 +101,14 @@ class Ticketing_model extends CI_Model {
         );
         return $this->db->insert('vehichles', $data);
     }
+    public function createSeats($vid){
+        if($vid >=1)
+        {
+            while($vid >= 1){
+                
+            }
+        }
+    }
     public function isVehichleUnique($reg_no){
         $query = $this->db->get_where('vehichles', array('reg_no' => $reg_no));
         $num = $query->num_rows();
