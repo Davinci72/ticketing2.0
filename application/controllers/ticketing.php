@@ -143,6 +143,7 @@ class Ticketing extends CI_Controller {
         $driver_fname = $arr['driver'][0]['first_name'];
         $driver_lname = $arr['driver'][0]['last_name'];
         $driver_age = $arr['driver'][0]['age'];
+        $driver_id_no = $arr['driver'][0]['id_no'];
         $driver_license = $arr['driver'][0]['license_no'];
         $this->getError($reg_no,'402','Field Registration Number is empty');
         $this->getError($seats_vip,'402','Field For VIP Seats is empty');
@@ -153,7 +154,37 @@ class Ticketing extends CI_Controller {
         $this->getError($driver_license,'402','Field driver license is empty');
         if(empty($this->gError))
         {
-            echo 'A okay Mate';
+            if($this->Ticketing_model->isVehichleUnique($reg_no) == false)
+            {
+                if($this->Ticketing_model->isDriverUnique($driver_id_no) == false)
+                {
+                    $driver_id = $this->Ticketing_model->saveDriver($driver_fname,$driver_lname,$driver_age,$driver_id_no,$driver_license);
+                    $this->Ticketing_model->saveVehichle($reg_no,$seats_vip,$seats_normal,$driver_id);
+                    $success = array(
+                        'success'=>200,
+                        'desc'=>"Vehichle and driver successfully added"
+                    );
+                    $this->contentOut($success);
+                }
+                else
+                {
+                    $error = array(
+                        'Error'=>403,
+                        'desc'=>"Driver Already Exists"
+                    );
+                    $this->contentOut($error);
+                }
+                
+            }
+            else
+            {
+                $error = array(
+                    'Error'=>403,
+                    'desc'=>"Vehichle Already Exists"
+                );
+                $this->contentOut($error);
+            }
+            
         }
         else
         {
