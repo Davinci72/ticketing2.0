@@ -1,0 +1,21 @@
+select starting point
+
+    -create tables for destinations
+    -create api collections on postman for crud operations
+    -create api for crud operations on routes
+    -create collection for planning routes information
+        example : {
+            "from":nairobi,
+            "to":mombasa,
+            "depature_date":timestamp,
+            "vehichle_type":bus/14seater,
+            "fare":1400,
+        }
+select destination
+select travel date
+    -check routes table to see if they exist
+    -pull the routes data, time of depature, available seats, available vehichles(14 seaters etc), ammount for the trip,
+see available seats
+select seats
+pay
+ticket link sent via sms

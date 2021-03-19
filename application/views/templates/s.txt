@@ -1,0 +1,2 @@
+on the network 192.168.15.41 port 4121 connects to ssh, externaly it refuses
+on the network 192.168.15.40 port 2224 connects to ssh, externaly it refuses
