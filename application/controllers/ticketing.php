@@ -133,4 +133,5 @@ class Ticketing extends CI_Controller {
         else
         { $this->contentOut($res); }
     }
+    
 }
