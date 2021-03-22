@@ -33,7 +33,73 @@ class Ticketing_model extends CI_Model {
         }
         else
         {
-            return $query->result();
+            //get vehichle and driver and date info
+            $r = $query->result();
+            $vehichle = $this->getVehichle($r[0]->vid);
+            if($vehichle == 0 )
+            {
+                $vehichle = array(
+                    "error_code"=>501,
+                    "description"=>"This route has not been assigned a vehichle"
+                );
+            }
+            
+                //get driver info
+            $driver = $this->getDriverInfo($r[0]->vid);
+            if($driver == 0 )
+            {
+                $driver = array(
+                    "error_code"=>502,
+                    "description"=>"This Vehichle has not been assigned a driver"
+                );
+            }
+            $availableSeats = $this->getAvailableSeats($r[0]->vid);
+            if($availableSeats == 0 )
+            {
+                $availableSeats = array(
+                    "error_code"=>503,
+                    "description"=>"This Vehichle Is Fully Booked, Try a different date"
+                );
+            }
+            return $routeInfo = array("route_info"=>$r,"vehichle_info"=>$vehichle,"available_seats"=>$availableSeats,"driver_info"=>$driver);
+            // var_dump($r);
+            // exit();
+        }
+    }
+    public function getAvailableSeats($vid){
+        $query = $this->db->get_where('vehichle_seating', array('vid' => $vid,'booked'=>0));
+        $num = $query->num_rows();
+        if($num == 0){
+            return $num;
+        }
+        else
+        {
+            //get vehichle and driver and date info
+            return $r = $query->result();
+        }
+    }
+    public function getVehichle($vid){
+        $query = $this->db->get_where('vehichles', array('id' => $vid));
+        $num = $query->num_rows();
+        if($num == 0){
+            return $num;
+        }
+        else
+        {
+            //get vehichle and driver and date info
+            return $r = $query->result();
+        }
+    }
+    public function getDriverInfo($vid){
+        $query = $this->db->get_where('drivers', array('vid' => $vid));
+        $num = $query->num_rows();
+        if($num == 0){
+            return $num;
+        }
+        else
+        {
+            //get vehichle and driver and date info
+            return $r = $query->result();
         }
     }
     public function checkDuplicatesRoutes($vid,$route_from,$route_to){
@@ -92,20 +158,32 @@ class Ticketing_model extends CI_Model {
         $this->db->insert('drivers', $data);
         return $this->db->insert_id();
     }
-    public function saveVehichle($reg_no,$seats_vip,$seats_normal,$driver_id){
+    public function saveVehichle($reg_no,$seats_vip,$seats_normal_price,$seats_vip_price,$seats_normal,$driver_id){
         $data = array(
             "reg_no"=>$reg_no,
             "normal_seats"=>$seats_normal,
             "vip_seats"=>$seats_vip,
             'date_c'=>date("Y-m-d h:i:s")
         );
-        return $this->db->insert('vehichles', $data);
+        $vid = $this->db->insert('vehichles', $data);
+        $this->createSeats($seats_vip,1,$vid,$seats_vip_price);
+        $this->createSeats($seats_normal,2,$vid,$seats_normal_price);
+        return $vid;
     }
-    public function createSeats($vid){
-        if($vid >=1)
+    public function createSeats($seats,$seat_type,$vid,$price){
+        if($seats >=1)
         {
-            while($vid >= 1){
-                
+            while($seats > 0 ){
+                $data = array(
+                    'vid'=>$vid,
+                    'seat_no'=>$seats,
+                    'seat_type'=>$seat_type,
+                    'seat_price'=>$price,
+                    'booked'=>0,
+                    'date_c'=>date("Y-m-d h:i:s")
+                );
+                $this->db->insert('vehichle_seating', $data);
+                $seats --;
             }
         }
     }
