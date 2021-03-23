@@ -81,6 +81,17 @@ class Ticketing_model extends CI_Model {
              );
         }
     }
+    public function getlocaleById($lid){
+        $query = $this->db->get_where('locale', array('id' => $lid));
+        $num = $query->num_rows();
+        if($num == 0){
+            return $num;
+        }
+        else
+        {
+             return $r = $query->result();
+        }
+    }
     public function getVehichle($vid){
         $query = $this->db->get_where('vehichles', array('id' => $vid));
         $num = $query->num_rows();

@@ -116,6 +116,18 @@ class Ticketing extends CI_Controller {
         else
         { $this->contentOut($res); }
     }
+    public function getLocaleByID($lid){
+        $res = $this->Ticketing_model->getlocaleById($lid);
+        if(($res == 0)){
+            $err = array(
+                'Error'=>'402',
+                'desc'=>'Empty Result'
+            );
+            $this->contentOut($err);
+        }
+        else
+        { $this->contentOut($res); }
+    }
     public function contentOut($res){
         $this->output
         ->set_content_type('application/json')

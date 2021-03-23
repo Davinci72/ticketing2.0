@@ -71,6 +71,7 @@ $route['buy-ticket']='pager/buyTicket';
 $route['check-route']='pager/checkRoute';
 $route['create-location']='Ticketing/createLocation';
 $route['get-locations/(:num)/(:num)']='Ticketing/getLocale/$1/$2';
+$route['get-locale-by-id/(:num)']='Ticketing/getLocaleByID/$1';
 $route['get-route-info/(:num)/(:num)']='Ticketing/getRouteInfo/$1/$2';
 $route['show-route-info'] = 'pager/showRouteInfo';
 $route['plan-route/(:num)/(:num)']='Ticketing/createRoute/$1/$2';

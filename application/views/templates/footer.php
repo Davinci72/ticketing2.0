@@ -129,6 +129,16 @@
 
     <!-- JS Customization -->
     <script src="<?=base_url('assets/js/custom.js')?>"></script>
+    <!-- JS Unify -->
+<script  src="<?=base_url('assets/js/components/hs.count-qty.js')?>"></script>
+
+<!-- JS Plugins Init. -->
+<script >
+  $(document).on('ready', function () {
+      // initialization of forms
+      $.HSCore.components.HSCountQty.init('.js-quantity');
+    });
+</script>
 
     <!-- JS Plugins Init. -->
     <script>

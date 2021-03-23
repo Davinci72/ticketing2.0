@@ -8,7 +8,7 @@
 
           <div class="g-bg-white g-pa-30">
             <!-- Input Group -->
-            <form action="<?=base_url('show-route-info')?>" method="post">
+            <form action="<?=base_url('check-route')?>" method="post">
 
               <div class="row">
                 <div class="col-6 col-lg-6 g-mb-30">

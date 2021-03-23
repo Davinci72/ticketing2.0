@@ -50,6 +50,18 @@ class Pager extends CI_Controller {
 		'/'.
 		$this->input->post('route_to')
 		);
+		$checkError = json_decode($data['routeinfo'],true);
+		$e = array_key_exists('Error',$checkError);
+		// var_dump(array_key_exists('Error',$checkError));
+		if( $e == true ){
+			$data['error'] = true;
+			$data['theerror']='There Seems To Be no active vehichles going on that route';
+		}
+		else
+		{
+			$data['r_from'] = $this->Server->getRequests('http://localhost/ticketing/get-locale-by-id/'.$this->input->post('route_from'));
+			$data['r_to'] = $this->Server->getRequests('http://localhost/ticketing/get-locale-by-id/'.$this->input->post('route_to'));
+		}
 		$this->load->view('templates/pages_header');
 		// $this->load->view('templates/side-nav');
 		$this->load->view('pages/ticketing/booking_info',$data);
