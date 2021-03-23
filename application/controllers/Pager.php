@@ -45,11 +45,16 @@ class Pager extends CI_Controller {
         $this->load->view('templates/footer');
 	}
 	public function checkRoute(){
-		echo $routeinfo = $this->Server->getRequests('http://localhost/ticketing/get-route-info/'.
+		$data['routeinfo'] = $this->Server->getRequests('http://localhost/ticketing/get-route-info/'.
 		$this->input->post('route_from').
 		'/'.
 		$this->input->post('route_to')
 		);
+		$this->load->view('templates/pages_header');
+		// $this->load->view('templates/side-nav');
+		$this->load->view('pages/ticketing/booking_info',$data);
+        $this->load->view('templates/footer');
+		
 	}
 	public function about(){
 		

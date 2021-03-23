@@ -7,6 +7,12 @@ application/logs/*
 !application/logs/index.html
 
 !application/*/.htaccess
+assets/
+assets2/
+assets3/
+system/
+temp/
+application/cache/
 
 composer.lock
 

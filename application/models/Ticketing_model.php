@@ -75,7 +75,10 @@ class Ticketing_model extends CI_Model {
         else
         {
             //get vehichle and driver and date info
-            return $r = $query->result();
+             $r = $query->result();
+             return $f = array(
+                "available_seats"=>$r,"total"=>$num
+             );
         }
     }
     public function getVehichle($vid){
