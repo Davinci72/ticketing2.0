@@ -27,14 +27,13 @@
               </div>
             <!-- End Border Alert -->
             <?php } ?>
-            <form action="<?=base_url('check-route')?>" method="post">
+            <form action="<?=base_url('check-route-nairobi-commuter-rail')?>" method="post">
 
               <div class="row">
                 <div class="col-3 col-lg-3 g-mb-30">
                   <!-- Button Group -->
                   <div class="input-group-btn">
-                    <select name="route_from" id="target" class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" required
-                            data-placeholder="Select Origin Town"
+                    <select name="route" id="target" class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" data-placeholder="Select Origin Town"
                             data-open-icon="fa fa-angle-down"
                             data-close-icon="fa fa-angle-up">
                       <option></option>
@@ -48,8 +47,7 @@
                     <div class="hidden embakasilocations col-6 col-lg-6 g-mb-30">
                         <!-- Button Group -->
                         <div class="input-group-btn">
-                            <select name="route_to" id="displaytimeemba" class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" required
-                                    data-placeholder="Select Route"
+                            <select name="route_za_emba" id="displaytimeemba" class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" data-placeholder="Select Route"
                                     data-open-icon="fa fa-angle-down"
                                     data-close-icon="fa fa-angle-up">
                             <option></option>
@@ -62,8 +60,7 @@
                     <div class="hidden syokimaulocations col-6 col-lg-6 g-mb-30">
                         <!-- Button Group -->
                         <div class="input-group-btn">
-                            <select name="route_to" id="displaytime" class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" required
-                                    data-placeholder="Select Route"
+                            <select name="route_za_syoki" id="displaytime" class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" data-placeholder="Select Route"
                                     data-open-icon="fa fa-angle-down"
                                     data-close-icon="fa fa-angle-up">
                             <option></option>
@@ -76,8 +73,7 @@
                     <div class="hidden n-2-s-t col-3 col-lg-3 g-mb-30">
                         <!-- Button Group -->
                         <div class="input-group-btn">
-                            <select name="route_to"  class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" required
-                                    data-placeholder="Select Time"
+                            <select name="r-t-z-n-2-s"  class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" data-placeholder="Select Time"
                                     data-open-icon="fa fa-angle-down"
                                     data-close-icon="fa fa-angle-up">
                             <option></option>
@@ -93,8 +89,7 @@
                     <div class="hidden s-2-n-t col-3 col-lg-3 g-mb-30">
                         <!-- Button Group -->
                         <div class="input-group-btn">
-                            <select name="route_to"  class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" required
-                                    data-placeholder="Select Time"
+                            <select name="r-t-z-s-2-n"  class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" data-placeholder="Select Time"
                                     data-open-icon="fa fa-angle-down"
                                     data-close-icon="fa fa-angle-up">
                             <option></option>
@@ -110,8 +105,7 @@
                     <div class="hidden n-2-e-t col-3 col-lg-3 g-mb-30">
                         <!-- Button Group -->
                         <div class="input-group-btn">
-                            <select name="route_to"  class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" required
-                                    data-placeholder="Select Time"
+                            <select name="r-t-z-n-2-e"  class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" data-placeholder="Select Time"
                                     data-open-icon="fa fa-angle-down"
                                     data-close-icon="fa fa-angle-up">
                             <option></option>
@@ -128,8 +122,7 @@
                     <div class="hidden e-2-n-t col-3 col-lg-3 g-mb-30">
                         <!-- Button Group -->
                         <div class="input-group-btn">
-                            <select name="route_to"  class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" required
-                                    data-placeholder="Select Time"
+                            <select name="r-t-z-e-2-n"  class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" data-placeholder="Select Time"
                                     data-open-icon="fa fa-angle-down"
                                     data-close-icon="fa fa-angle-up">
                             <option></option>

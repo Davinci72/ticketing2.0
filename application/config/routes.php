@@ -76,6 +76,7 @@ $route['get-route-info/(:num)/(:num)']='Ticketing/getRouteInfo/$1/$2';
 $route['show-route-info'] = 'pager/showRouteInfo';
 $route['nairobi-commuter-rail']='pager/ncr';
 $route['plan-route/(:num)/(:num)']='Ticketing/createRoute/$1/$2';
+$route['check-route-nairobi-commuter-rail'] = 'Ticketing/bookNcr';
 $route['get-all-routes']='Ticketing/getAllRoutes';
 $route['create-vehichles']='Ticketing/addVehichle';
 
