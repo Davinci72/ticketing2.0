@@ -54,8 +54,8 @@ class Pager extends CI_Controller {
 		$e = array_key_exists('Error',$checkError);
 		// var_dump(array_key_exists('Error',$checkError));
 		if( $e == true ){
-			$data['error'] = true;
-			$data['theerror']='There Seems To Be no active vehichles going on that route';
+			$this->session->set_flashdata('error', 'Please try a different route, the one you have selected is invalid');
+            redirect(base_url());
 		}
 		else
 		{

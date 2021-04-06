@@ -8,6 +8,25 @@
 
           <div class="g-bg-white g-pa-30">
             <!-- Input Group -->
+
+            <?php 
+                    $e = $this->session->flashdata('error');
+                    if(!empty($e)){ ?>
+             <!-- Border Alert -->
+              <div class="alert fade show g-brd-around g-brd-red rounded-0" role="alert">
+                <button type="button" class="close u-alert-close--light g-ml-10 g-mt-1" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">×</span>
+                </button>
+                <div class="media">
+                  <div class="media-body">
+                    <div class="d-flex justify-content-between">
+                    </div>
+                    <p class="m-0 text-center g-font-size-14"><strong><?=$e?></strong></p>
+                  </div>
+                </div>
+              </div>
+            <!-- End Border Alert -->
+            <?php } ?>
             <form action="<?=base_url('check-route')?>" method="post">
 
               <div class="row">
