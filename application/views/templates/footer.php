@@ -131,7 +131,43 @@
     <script src="<?=base_url('assets/js/custom.js')?>"></script>
     <!-- JS Unify -->
 <script  src="<?=base_url('assets/js/components/hs.count-qty.js')?>"></script>
+<script>
+    $('#target').change(function() { 
+          $(".s-2-n-t").addClass("hidden");
+          $(".n-2-s-t").addClass("hidden");
+          $(".e-2-n-t").addClass("hidden");
+          $(".n-2-e-t").addClass("hidden");
+        if(this.value=="embakasi"){
+          $(".syokimaulocations").addClass("hidden");
+          $(".embakasilocations").removeClass("hidden");
+        }
+        if(this.value=="syokimau"){
+          $(".embakasilocations").addClass("hidden");
+          $(".syokimaulocations").removeClass("hidden");
+        }
+       });
 
+       $('#displaytime').change(function() { 
+        if(this.value=="1"){
+          $(".s-2-n-t").addClass("hidden");
+          $(".n-2-s-t").removeClass("hidden");
+        }
+        if(this.value=="2"){
+          $(".n-2-s-t").addClass("hidden");
+          $(".s-2-n-t").removeClass("hidden");
+        }
+       });
+       $('#displaytimeemba').change(function() { 
+        if(this.value=="1"){
+          $(".e-2-n-t").addClass("hidden");
+          $(".n-2-e-t").removeClass("hidden");
+        }
+        if(this.value=="2"){
+          $(".n-2-e-t").addClass("hidden");
+          $(".e-2-n-t").removeClass("hidden");
+        }
+       });
+</script>
 <!-- JS Plugins Init. -->
 <script >
   $(document).on('ready', function () {

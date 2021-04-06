@@ -44,6 +44,14 @@ class Pager extends CI_Controller {
 		$this->load->view('pages/ticketing/home',$data);
         $this->load->view('templates/footer');
 	}
+	public function ncr(){
+		$locations = $this->Server->getRequests('http://localhost/ticketing/get-locations/100/0');
+		$data['locations'] = $locations;
+        $this->load->view('templates/pages_header');
+		// $this->load->view('templates/side-nav');
+		$this->load->view('pages/ticketing/book-ncr',$data);
+        $this->load->view('templates/footer');
+	}
 	public function checkRoute(){
 		$data['routeinfo'] = $this->Server->getRequests('http://localhost/ticketing/get-route-info/'.
 		$this->input->post('route_from').

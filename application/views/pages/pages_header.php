@@ -227,7 +227,7 @@
             <div id="navBar" class="collapse navbar-collapse align-items-center order-lg-last g-brd-top g-brd-none--lg g-brd-primary-dark-v1">
               <ul class="navbar-nav g-py-30 g-py-0--lg">
                 <li class="nav-item">
-                  <a class="nav-link g-color-white g-brd-x--lg g-brd-primary-dark-v1 g-bg-primary-dark-v1--hover g-font-weight-600 g-font-size-default g-px-17 g-px-23--xl g-py-15" href="home-page-1.html">
+                  <a class="nav-link g-color-white g-brd-x--lg g-brd-primary-dark-v1 g-bg-primary-dark-v1--hover g-font-weight-600 g-font-size-default g-px-17 g-px-23--xl g-py-15" href="<?=base_url()?>">
                     Home
                   </a>
                 </li>
@@ -238,20 +238,17 @@
                      aria-haspopup="true"
                      aria-expanded="false"
                      aria-controls="nav-submenu--listing">
-                    Listing
+                    Tickets
                   </a>
 
                   <!-- Submenu -->
                   <ul id="nav-submenu--listing" class="hs-sub-menu list-unstyled u-shadow-v11 g-min-width-220 g-mt-2"
                       aria-labelledby="nav-link--listing">
                     <li class="dropdown-item">
-                      <a class="nav-link g-color-text g-font-weight-600" href="page-list-view-1.html">List View</a>
+                      <a class="nav-link g-color-text g-font-weight-600" href="page-list-view-1.html">Nairobi Commuter Rail</a>
                     </li>
                     <li class="dropdown-item">
-                      <a class="nav-link g-color-text g-font-weight-600" href="page-grid-view-1.html">Grid View</a>
-                    </li>
-                    <li class="dropdown-item">
-                      <a class="nav-link g-color-text g-font-weight-600" href="page-single-item-1.html">Listing Single Page</a>
+                      <a class="nav-link g-color-text g-font-weight-600" href="page-grid-view-1.html">BRT</a>
                     </li>
                   </ul>
                   <!-- End Submenu -->
