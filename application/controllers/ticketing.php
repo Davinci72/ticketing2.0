@@ -263,10 +263,6 @@ class Ticketing extends CI_Controller {
 
         }
         
-        
-        
-        
-        
         //embakasi to nairobi departure time
         $r_t_z_e_2_n = $this->input->post('r-t-z-e-2-n');
     }
