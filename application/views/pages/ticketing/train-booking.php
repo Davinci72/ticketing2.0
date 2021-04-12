@@ -163,6 +163,14 @@
                 </div>
             </div>
             <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-0">
+            <div class="form-group u-has-success-v1-1 g-mb-20">
+              <label for="example-date-input" class="col-2 col-form-label">Date Of Birth</label>
+              <div class="col-10">
+                <input name="dob" class="form-control rounded-0 form-control-md" type="date" value="2011-08-19" id="example-date-input">
+                <small class="form-control-feedback">This is a required field.</small>
+              </div>
+            </div>
+            <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-0">
             <h3 class="h2 g-font-weight-300 g-mb-20">Paymet Details </h3>
             <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-0">
                 <div class="row">

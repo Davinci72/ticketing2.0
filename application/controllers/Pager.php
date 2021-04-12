@@ -95,7 +95,7 @@ class Pager extends CI_Controller {
                 {
 					$data['route'] = 'Nairobi Central Station To Syokimau';
                     //nairobi to syokimau departure time
-                    $data['departure'] = $this->input->post('n-2-s-t');
+                    $data['departure'] = $this->input->post('r-t-z-n-2-s');
                 }
                 if($routeSyokimau==2)
                 {

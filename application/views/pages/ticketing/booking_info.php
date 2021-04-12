@@ -228,6 +228,7 @@
                     </div>
                 </div>
             </div>
+            
             <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-0">
             <h3 class="h2 g-font-weight-300 g-mb-20">Paymet Details </h3>
             <hr class="u-divider-linear-gradient u-divider-linear-gradient--gray-light-v2 g-my-0">
