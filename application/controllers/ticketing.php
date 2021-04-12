@@ -229,20 +229,18 @@ class Ticketing extends CI_Controller {
         $this->contentOut($c);
     }
     public function bookNcr(){
-        echo $route = $this->input->post('route');
+        $route = $this->input->post('route');
         switch($route)
         {
             case 'syokimau':
                 $routeSyokimau = $this->input->post('route_za_syoki');
                 if($routeSyokimau==1)
                 {
-                    echo 'Route ID :'.$routeSyokimau.'Your Route is Syokimau, Departure is from Nairobi central station to syokimau';
                     //nairobi to syokimau departure time
                     $n_2_s_t = $this->input->post('n-2-s-t');
                 }
                 if($routeSyokimau==2)
                 {
-                    echo 'Route ID :'.$routeSyokimau.'Your Route is Syokimau, Departure is from Syokimau  to Nairobi central station';
                     //syokimau to nairobi departure time
                     echo 'Departure Time Is '.$s_2_n_t = $this->input->post('r-t-z-s-2-n');
                 }

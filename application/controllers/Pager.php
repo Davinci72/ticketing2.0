@@ -85,7 +85,48 @@ class Pager extends CI_Controller {
 		$this->load->view('pages/ticketing/buyticket');
         $this->load->view('templates/footer');
 	}
+	public function infoNcr(){
+		$route = $this->input->post('route');
+        switch($route)
+        {
+            case 'syokimau':
+                $routeSyokimau = $this->input->post('route_za_syoki');
+                if($routeSyokimau==1)
+                {
+					$data['route'] = 'Nairobi Central Station To Syokimau';
+                    //nairobi to syokimau departure time
+                    $data['departure'] = $this->input->post('n-2-s-t');
+                }
+                if($routeSyokimau==2)
+                {
+					$data['route'] = 'Syokimau To Nairobi Central Station';
+                    //syokimau to nairobi departure time
+                    $data['departure'] = $this->input->post('r-t-z-s-2-n');
+                }
+            break;
+            case 'embakasi':
+                $routeEmbakasi = $this->input->post('route_za_emba');
+                if($routeEmbakasi==1)
+                {
+					$data['route'] = 'Nairobi Central Station To Embakasi';
+                    //nairobi to embakasi departure time
+                    $data['departure'] =  $this->input->post('r-t-z-n-2-e');
+                }
+                if($routeEmbakasi==2)
+                {
+					$data['route'] = 'Embakasi To Nairobi Central Station';
+                    //embakasi to nairobi departure time
+                    $data['departure'] = $this->input->post('r-t-z-e-2-n');
+                }
+            break;
+
+        }
+		$this->load->view('templates/pages_header');
+		// $this->load->view('templates/side-nav');
+		$this->load->view('pages/ticketing/train-booking',$data);
+        $this->load->view('templates/footer');
+	}
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* End of file Pager.php */
+/* Location: ./application/controllers/Pager.php */

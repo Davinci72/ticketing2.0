@@ -54,10 +54,10 @@
               <div class="col-2 col-md-4 col-lg-2">
                 <!-- Logo -->
                 <a class="navbar-brand d-flex align-items-center g-color-main text-uppercase g-text-underline--none--hover" href="home-page-1.html">
-                  <span class="g-color-text g-font-size-35 g-line-height-0_7 g-opacity-0_4 mr-4"><i class="icon-real-estate-066 u-line-icon-pro"></i></span>
+                  <span class="g-color-text g-font-size-35 g-line-height-0_7 g-opacity-0_4 mr-4"><i class="fa fa-train"></i></span>
                   <span class="d-block g-hidden-sm-down g-font-weight-600 g-line-height-1_4">
-                    Real Estate
-                    <span class="d-block g-color-text g-font-size-10 text-center">Your Reliability</span>
+                    NCR
+                    <span class="d-block g-color-text g-font-size-10 text-center">Commuter Rail</span>
                   </span>
                 </a>
                 <!-- End Logo -->
@@ -117,38 +117,6 @@
               <div class="col-10 col-md-8 col-lg-6 ml-auto">
                 <!-- List -->
                 <ul class="list-inline float-right mb-0">
-                  <!-- Guide -->
-                  <li class="list-inline-item g-pos-rel g-mx-2">
-                    <a id="guide-dropdown-invoker-2" class="u-link-v5 g-color-gray-dark-v5 g-color-primary--hover g-font-weight-500 g-font-size-12 g-pa-10" href="#"
-                       aria-controls="guide-dropdown-2"
-                       aria-haspopup="true"
-                       aria-expanded="false"
-                       data-dropdown-event="hover"
-                       data-dropdown-target="#guide-dropdown-2"
-                       data-dropdown-type="css-animation"
-                       data-dropdown-duration="0"
-                       data-dropdown-hide-on-scroll="true"
-                       data-dropdown-animation-in="fadeIn"
-                       data-dropdown-animation-out="fadeOut">
-                      Guide
-                      <i class="ml-2 fa fa-angle-down"></i>
-                    </a>
-                    <ul id="guide-dropdown-2" class="list-unstyled u-shadow-v11 g-min-width-220 g-bg-white g-pos-abs g-left-0 g-z-index-99 g-mt-28"
-                        aria-labelledby="guide-dropdown-invoker-2">
-                      <li class="dropdown-item g-px-5">
-                        <a class="nav-link g-color-text g-font-weight-600" href="#">
-                          First-Time Home Buyers Guide
-                        </a>
-                      </li>
-                      <li class="dropdown-item g-px-5">
-                        <a class="nav-link g-color-text g-font-weight-600" href="#">
-                          Veterans Home Buyers Guide
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <!-- End Guide -->
-
                   <li class="list-inline-item g-hidden-xs-down g-mx-2">
                     <span class="g-color-gray-light-v1 g-pos-rel g-top-minus-1">|</span>
                   </li>
@@ -213,12 +181,6 @@
                 <li class="list-inline-item mr-0">
                   <a class="active u-link-v5 g-color-white g-bg-transparent g-bg-primary-dark-v1--hover g-bg-primary-dark-v1--active g-font-weight-500 g-pa-10" href="javascript:void(0);">En</a>
                 </li>
-                <li class="list-inline-item mr-0">
-                  <a class="u-link-v5 g-color-white g-bg-transparent g-bg-primary-dark-v1--hover g-bg-primary-dark-v1--active g-font-weight-500 g-pa-10" href="javascript:void(0);">中文</a>
-                </li>
-                <li class="list-inline-item mr-0">
-                  <a class="u-link-v5 g-color-white g-bg-transparent g-bg-primary-dark-v1--hover g-bg-primary-dark-v1--active g-font-weight-500 g-pa-10" href="javascript:void(0);">Es</a>
-                </li>
               </ul>
               <!-- End Languages -->
             </div>
@@ -255,37 +217,6 @@
                 </li>
                 <!-- End Listing - Submenu -->
 
-                <!-- Agents - Submenu -->
-                <li class="nav-item hs-has-sub-menu">
-                  <a id="nav-link--page" class="nav-link g-color-white g-brd-right--lg g-brd-primary-dark-v1 g-bg-primary-dark-v1--hover g-font-weight-600 g-font-size-default g-px-17 g-px-23--xl g-py-15" href="#"
-                     aria-haspopup="true"
-                     aria-expanded="false"
-                     aria-controls="nav-submenu--page">
-                    Agents
-                  </a>
-
-                  <!-- Submenu -->
-                  <ul id="nav-submenu--page" class="hs-sub-menu list-unstyled u-shadow-v11 g-min-width-220 g-mt-2"
-                      aria-labelledby="nav-link--page">
-                    <li class="dropdown-item">
-                      <a class="nav-link g-color-text g-font-weight-600" href="page-agents-list-view-1.html">List View</a>
-                    </li>
-                    <li class="dropdown-item">
-                      <a class="nav-link g-color-text g-font-weight-600" href="page-agents-grid-view-1.html">Grid View</a>
-                    </li>
-                    <li class="dropdown-item">
-                      <a class="nav-link g-color-text g-font-weight-600" href="page-agents-single-page-1.html">Agents Single Page</a>
-                    </li>
-                  </ul>
-                  <!-- End Submenu -->
-                </li>
-                <!-- End Agents - Submenu -->
-
-                <li class="nav-item">
-                  <a class="nav-link g-color-white g-brd-right--lg g-brd-primary-dark-v1 g-bg-primary-dark-v1--hover g-font-weight-600 g-font-size-default g-px-17 g-px-23--xl g-py-15" href="page-share-1.html">
-                    Share
-                  </a>
-                </li>
                 <li class="nav-item">
                   <a class="nav-link g-color-white g-brd-right--lg g-brd-primary-dark-v1 g-bg-primary-dark-v1--hover g-font-weight-600 g-font-size-default g-px-17 g-px-23--xl g-py-15" href="page-help-1.html">
                     Help
@@ -295,9 +226,6 @@
                   <a class="nav-link g-color-white g-brd-right--lg g-brd-primary-dark-v1 g-bg-primary-dark-v1--hover g-font-weight-600 g-font-size-default g-px-17 g-px-23--xl g-py-15" href="page-contacts-1.html">
                     Contacts
                   </a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link g-color-white g-brd-right--lg g-brd-primary-dark-v1 g-bg-primary-dark-v1--hover g-font-weight-600 g-font-size-default g-px-17 g-px-23--xl g-py-15" href="<?=base_url('index-2.html')?>">Main</a>
                 </li>
               </ul>
             </div>

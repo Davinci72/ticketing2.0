@@ -33,7 +33,7 @@
                 <div class="col-3 col-lg-3 g-mb-30">
                   <!-- Button Group -->
                   <div class="input-group-btn">
-                    <select name="route" id="target" class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" data-placeholder="Select Origin Town"
+                    <select name="route" id="target" class="js-custom-select u-select-v1 w-100 g-brd-gray-light-v3 g-color-main g-color-primary--hover g-py-12" data-placeholder="Select Departure Station"
                             data-open-icon="fa fa-angle-down"
                             data-close-icon="fa fa-angle-up">
                       <option></option>
@@ -77,11 +77,11 @@
                                     data-open-icon="fa fa-angle-down"
                                     data-close-icon="fa fa-angle-up">
                             <option></option>
-                            <option value="1"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >6:35 AM</option>
-                            <option value="2"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >8:00 AM</option>
-                            <option value="3"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >9:35 AM</option>
-                            <option value="4"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >12:00 PM</option>
-                            <option value="5"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >6:20 pM</option>
+                            <option value="6:35 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >6:35 AM</option>
+                            <option value="8:00 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >8:00 AM</option>
+                            <option value="9:35 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >9:35 AM</option>
+                            <option value="12:00 PM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >12:00 PM</option>
+                            <option value="6:20 PM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >6:20 PM</option>
                             </select>
                         </div>
                         <!-- End Button Group -->
@@ -93,10 +93,10 @@
                                     data-open-icon="fa fa-angle-down"
                                     data-close-icon="fa fa-angle-up">
                             <option></option>
-                            <option value="1"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >7:15 AM</option>
-                            <option value="2"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >8:50 AM</option>
-                            <option value="3"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >10:40 AM</option>
-                            <option value="4"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >14:30 PM</option>
+                            <option value="7:15 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >7:15 AM</option>
+                            <option value="8:50 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >8:50 AM</option>
+                            <option value="10:40 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >10:40 AM</option>
+                            <option value="14:30 PM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >14:30 PM</option>
                             </select>
                         </div>
                         <!-- End Button Group -->
@@ -109,11 +109,11 @@
                                     data-open-icon="fa fa-angle-down"
                                     data-close-icon="fa fa-angle-up">
                             <option></option>
-                            <option value="1"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >7:20 AM</option>
-                            <option value="2"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >9:30 AM</option>
-                            <option value="3"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >11:20 AM</option>
-                            <option value="4"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >13:30 </option>
-                            <option value="4"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >18:30 </option>
+                            <option value="7:20 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >7:20 AM</option>
+                            <option value="9:30 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >9:30 AM</option>
+                            <option value="11:20 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >11:20 AM</option>
+                            <option value="13:30"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >13:30 </option>
+                            <option value="18:30"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >18:30 </option>
                             </select>
                         </div>
                         <!-- End Button Group -->
@@ -126,11 +126,11 @@
                                     data-open-icon="fa fa-angle-down"
                                     data-close-icon="fa fa-angle-up">
                             <option></option>
-                            <option value="1"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >8:00 AM</option>
-                            <option value="2"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >10:15 AM</option>
-                            <option value="3"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >12:10 AM</option>
-                            <option value="4"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >14:20 PM</option>
-                            <option value="4"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >19:15 PM</option>
+                            <option value="8:00 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >8:00 AM</option>
+                            <option value="10:15 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >10:15 AM</option>
+                            <option value="12:10 AM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >12:10 AM</option>
+                            <option value="14:20 PM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >14:20 PM</option>
+                            <option value="19:15 PM"  class="g-brd-none g-color-main g-color-white--hover g-color-white--active g-bg-primary--hover g-bg-primary--active" >19:15 PM</option>
                             </select>
                         </div>
                         <!-- End Button Group -->
