@@ -87,6 +87,7 @@ class Pager extends CI_Controller {
 	}
 	public function infoNcr(){
 		$route = $this->input->post('route');
+		$data['ts'] = date('Y-m-d H:i:s');
         switch($route)
         {
             case 'syokimau':
@@ -124,6 +125,20 @@ class Pager extends CI_Controller {
 		$this->load->view('templates/pages_header');
 		// $this->load->view('templates/side-nav');
 		$this->load->view('pages/ticketing/train-booking',$data);
+        $this->load->view('templates/footer');
+	}
+	public function processPayments(){
+		$phone = $this->input->post('mpesa_no');
+		$amt = $this->input->post('total_amt');
+		$url = "http://157.230.164.75:8040/pos/sendpush";
+		$body = '{
+			"phone":"'.$phone.'",
+			"amount":"'.$amt.'"
+		}';
+		$this->Server->postRequests($url,$body);
+		$this->load->view('templates/pages_header');
+		// $this->load->view('templates/side-nav');
+		$this->load->view('pages/ticketing/success');
         $this->load->view('templates/footer');
 	}
 }
